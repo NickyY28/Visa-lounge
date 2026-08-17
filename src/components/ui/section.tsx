@@ -16,6 +16,7 @@ type SectionHeadingProps = {
   title: string
   description?: string
   align?: "left" | "center"
+  invert?: boolean
   className?: string
 }
 
@@ -25,6 +26,7 @@ export function SectionHeading({
   title,
   description,
   align = "left",
+  invert = false,
   className,
 }: SectionHeadingProps) {
   return (
@@ -36,18 +38,31 @@ export function SectionHeading({
       )}
     >
       {eyebrow ? (
-        <p className="mb-3 text-xs font-medium tracking-[0.16em] text-muted uppercase">
+        <p
+          className={cn(
+            "mb-3 text-xs font-medium tracking-[0.16em] uppercase",
+            invert ? "text-paper/55" : "text-muted"
+          )}
+        >
           {eyebrow}
         </p>
       ) : null}
       <h2
         id={id}
-        className="font-serif text-3xl leading-tight tracking-tight text-foreground md:text-4xl"
+        className={cn(
+          "font-serif text-4xl leading-[1.12] tracking-tight md:text-5xl",
+          invert ? "text-paper" : "text-foreground"
+        )}
       >
         {title}
       </h2>
       {description ? (
-        <p className="mt-4 text-base leading-relaxed text-muted md:text-lg">
+        <p
+          className={cn(
+            "mt-4 text-base leading-relaxed md:text-lg",
+            invert ? "text-paper/70" : "text-muted"
+          )}
+        >
           {description}
         </p>
       ) : null}

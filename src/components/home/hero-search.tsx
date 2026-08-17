@@ -9,11 +9,10 @@ export function HeroSearch() {
   const id = useId()
   const [query, setQuery] = useState("")
   const trimmed = query.trim()
-  const showEmpty = trimmed.length > 0
 
   return (
-    <div className="mt-10 max-w-xl">
-      <label htmlFor={id} className="text-sm font-medium text-foreground">
+    <div>
+      <label htmlFor={id} className="text-sm font-medium text-ink">
         {heroContent.searchLabel}
       </label>
       <input
@@ -24,28 +23,21 @@ export function HeroSearch() {
         placeholder={heroContent.searchPlaceholder}
         autoComplete="off"
         className={cn(
-          "mt-2 w-full border border-border bg-surface px-4 py-3 text-base text-foreground",
-          "placeholder:text-muted/80",
+          "mt-2 w-full rounded-full border-[1.5px] border-ink/25 bg-surface px-5 py-3 text-base text-ink",
+          "placeholder:text-muted/70",
+          "transition-[border-color] duration-200 hover:border-ink/30",
           "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
         )}
       />
-      <div
-        className={cn(
-          "mt-3 min-h-[2.75rem] border border-dashed border-border bg-surface/60 px-4 py-3 text-sm text-muted transition-opacity duration-150",
-          showEmpty ? "opacity-100" : "opacity-70"
-        )}
-        aria-live="polite"
-        aria-atomic="true"
-      >
-        {showEmpty ? (
-          <p>
-            <span className="sr-only">Search results: </span>
-            {heroContent.searchEmpty}
-          </p>
-        ) : (
-          <p className="text-muted/80">{heroContent.searchEmpty}</p>
-        )}
-      </div>
+      {trimmed ? (
+        <p
+          className="mt-3 text-sm text-muted"
+          aria-live="polite"
+          aria-atomic="true"
+        >
+          {heroContent.searchEmpty}
+        </p>
+      ) : null}
     </div>
   )
 }

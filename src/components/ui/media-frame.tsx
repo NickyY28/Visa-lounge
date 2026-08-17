@@ -22,7 +22,7 @@ export function MediaFrame({
   caption,
 }: MediaFrameProps) {
   return (
-    <figure className={cn("media-frame", className)}>
+    <figure className={cn("media-frame relative", className)}>
       <Image
         src={src}
         alt={alt}

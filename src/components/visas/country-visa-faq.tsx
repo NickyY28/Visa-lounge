@@ -2,6 +2,7 @@ import Link from "next/link"
 
 import { PlaceholderNote } from "@/components/visas/placeholder-note"
 import { buttonClassName } from "@/components/ui/button"
+import { FaqList } from "@/components/ui/faq-list"
 import type { CountryFaqItem } from "@/lib/visas/types"
 import { primaryCta } from "@/lib/site"
 
@@ -22,25 +23,8 @@ export function CountryVisaFaq({ items }: CountryVisaFaqProps) {
       </h2>
 
       {hasItems ? (
-        <div className="mt-6 divide-y divide-border border-y border-border">
-          {items!.map((item) => (
-            <details key={item.q} className="group">
-              <summary className="cursor-pointer list-none py-4 pr-4 text-base font-medium tracking-tight marker:content-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring [&::-webkit-details-marker]:hidden">
-                <span className="flex items-start justify-between gap-4">
-                  <span>{item.q}</span>
-                  <span
-                    className="mt-0.5 shrink-0 text-muted transition-transform duration-150 group-open:rotate-45"
-                    aria-hidden
-                  >
-                    +
-                  </span>
-                </span>
-              </summary>
-              <div className="pb-4 pr-8 text-sm leading-relaxed text-muted">
-                {item.a}
-              </div>
-            </details>
-          ))}
+        <div className="mt-6">
+          <FaqList items={items!} />
         </div>
       ) : (
         <div className="mt-6">

@@ -47,7 +47,7 @@ export function MobileNav({ pathname }: MobileNavProps) {
         ref={dialogRef}
         id="mobile-nav"
         aria-labelledby={titleId}
-        className="fixed inset-0 m-0 h-svh max-h-svh w-full max-w-none border-0 bg-background p-0 text-foreground backdrop:bg-foreground/40 open:flex open:flex-col"
+        className="fixed inset-0 m-0 h-svh max-h-svh w-full max-w-none border-0 bg-paper p-0 text-foreground backdrop:bg-black/70 open:flex open:flex-col"
         onClick={(event) => {
           if (event.target === dialogRef.current) close()
         }}

@@ -5,13 +5,22 @@
 
 export const heroContent = {
   eyebrow: "Visa assistance",
-  headline: "Your visa, handled from application to return.",
+  headlineLead: "Your visa, handled from",
+  headlineAccent: "application to return.",
   supporting:
     "From document preparation and submission to passport collection and return, we handle the process with you. If biometrics are required, we'll tell you when and where you need to attend.",
   searchLabel: "Search destination",
   searchPlaceholder: "e.g. France, Japan, United Kingdom",
   searchEmpty: "Visa destinations will appear here as they are added to the site.",
   exploreVisas: "Explore visas",
+  ribbon: [
+    "Prepare",
+    "Collect",
+    "Submit",
+    "Biometrics",
+    "Coordinate",
+    "Return",
+  ],
 } as const
 
 /** Visual placeholders — not a claim of supported destinations */
@@ -22,7 +31,7 @@ export const placeholderDestinations = [
   { name: "Singapore", slug: "singapore", code: "SG" },
   { name: "Thailand", slug: "thailand", code: "TH" },
   { name: "United Kingdom", slug: "united-kingdom", code: "GB" },
-  { name: "USA", slug: "usa", code: "US" },
+  { name: "USA", slug: "united-states", code: "US" },
   { name: "Italy", slug: "italy", code: "IT" },
 ] as const
 

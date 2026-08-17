@@ -7,17 +7,17 @@ export function SiteFooter() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="mt-auto border-t border-border bg-surface">
+    <footer className="mt-auto bg-ink text-paper">
       <Container className="grid gap-10 py-12 md:grid-cols-4 md:gap-8">
         <div className="md:col-span-2">
           <p className="font-serif text-xl tracking-tight">{site.name}</p>
-          <p className="mt-3 max-w-sm text-sm leading-relaxed text-muted">
+          <p className="mt-3 max-w-sm text-sm leading-relaxed text-paper/60">
             Visa assistance for travellers and businesses.
           </p>
-          <p className="mt-6 text-sm text-muted">
+          <p className="mt-6 text-sm text-paper/60">
             <a
               href={`mailto:${site.email}`}
-              className="text-foreground underline-offset-4 hover:underline"
+              className="text-paper underline-offset-4 hover:underline"
             >
               {site.email}
             </a>
@@ -26,7 +26,7 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <p className="text-xs font-medium tracking-[0.16em] text-muted uppercase">
+          <p className="text-xs font-medium tracking-[0.16em] text-paper/45 uppercase">
             Explore
           </p>
           <ul className="mt-4 space-y-2.5">
@@ -34,7 +34,7 @@ export function SiteFooter() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="text-sm text-foreground underline-offset-4 hover:underline"
+                  className="text-sm text-paper underline-offset-4 hover:underline"
                 >
                   {item.label}
                 </Link>
@@ -43,7 +43,7 @@ export function SiteFooter() {
             <li>
               <Link
                 href={primaryCta.href}
-                className="text-sm text-foreground underline-offset-4 hover:underline"
+                className="text-sm text-paper underline-offset-4 hover:underline"
               >
                 {primaryCta.label}
               </Link>
@@ -52,7 +52,7 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <p className="text-xs font-medium tracking-[0.16em] text-muted uppercase">
+          <p className="text-xs font-medium tracking-[0.16em] text-paper/45 uppercase">
             Company
           </p>
           <ul className="mt-4 space-y-2.5">
@@ -60,7 +60,7 @@ export function SiteFooter() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="text-sm text-foreground underline-offset-4 hover:underline"
+                  className="text-sm text-paper underline-offset-4 hover:underline"
                 >
                   {item.label}
                 </Link>
@@ -69,7 +69,7 @@ export function SiteFooter() {
             <li>
               <a
                 href={site.mtc.href}
-                className="text-sm text-foreground underline-offset-4 hover:underline"
+                className="text-sm text-paper underline-offset-4 hover:underline"
                 rel="noreferrer"
                 target="_blank"
               >
@@ -80,8 +80,8 @@ export function SiteFooter() {
         </div>
       </Container>
 
-      <div className="border-t border-border">
-        <Container className="flex flex-col gap-2 py-4 text-xs text-muted sm:flex-row sm:items-center sm:justify-between">
+      <div className="border-t border-white/10">
+        <Container className="flex flex-col gap-2 py-4 text-xs text-paper/45 sm:flex-row sm:items-center sm:justify-between">
           <p>
             © {year} {site.name}
           </p>

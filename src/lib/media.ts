@@ -7,10 +7,6 @@ const unsplash = (id: string, extra = "") =>
   `https://images.unsplash.com/${id}?auto=format&fit=crop&w=1600&q=80${extra}`
 
 export const pageImages = {
-  hero: {
-    src: unsplash("photo-1540959733332-eab4deabeeaf"),
-    alt: "Tokyo city lights at dusk",
-  },
   corporate: {
     src: unsplash("photo-1497366216548-37526070297c"),
     alt: "Quiet office interior",
@@ -24,6 +20,29 @@ export const pageImages = {
     alt: "Aircraft wing above clouds",
   },
 } as const
+
+export const collageImages = [
+  {
+    src: unsplash("photo-1546484475-7f7bd55792da"),
+    alt: "Open passport",
+    className: "left-0 top-8 h-44 w-36 rotate-[-8deg] md:h-52 md:w-40",
+  },
+  {
+    src: unsplash("photo-1450101499163-c8848c66ca85"),
+    alt: "Application documents on a desk",
+    className: "right-2 top-0 h-40 w-48 rotate-[7deg] md:h-48 md:w-56",
+  },
+  {
+    src: unsplash("photo-1502602898657-3e91760cbb34"),
+    alt: "Paris, a visa destination",
+    className: "bottom-2 left-10 h-36 w-44 rotate-[4deg] md:h-44 md:w-52",
+  },
+  {
+    src: unsplash("photo-1488646953014-85cb44e25828"),
+    alt: "Travel documents and map",
+    className: "right-6 bottom-8 h-32 w-32 rotate-[-5deg] md:h-40 md:w-40",
+  },
+] as const
 
 export const destinationImages: Record<string, { src: string; alt: string }> = {
   australia: {

@@ -27,12 +27,13 @@ export function CountryVisaPage({ model }: CountryVisaPageProps) {
 
   return (
     <article>
-      <div className="border-b border-border bg-surface">
-        <Container className="py-10 md:py-14">
+      <div className="border-b border-border bg-paper">
+        <Container className="py-12 md:py-16">
           <CountryHero
             name={country.name}
             isoCode={country.isoCode}
             intro={intro}
+            slug={country.slug}
           />
         </Container>
       </div>

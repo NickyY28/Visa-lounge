@@ -18,9 +18,9 @@ export function VisaProcess({ steps }: VisaProcessProps) {
         vary by destination; we will confirm what applies in your case.
       </p>
 
-      <ol className="mt-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <ol className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         {steps.map((step, index) => (
-          <li key={step.title} className="flex gap-4 md:block">
+          <li key={step.title} className="paper-card p-5">
             <span
               className="font-serif text-3xl leading-none text-foreground/20 tabular-nums md:mb-3 md:block"
               aria-hidden
@@ -28,7 +28,7 @@ export function VisaProcess({ steps }: VisaProcessProps) {
               {String(index + 1).padStart(2, "0")}
             </span>
             <span className="sr-only">Step {index + 1}:</span>
-            <div className="min-w-0 border-t border-border pt-3 md:pt-0">
+            <div className="min-w-0">
               <h3 className="text-base font-semibold tracking-tight">
                 {step.title}
               </h3>

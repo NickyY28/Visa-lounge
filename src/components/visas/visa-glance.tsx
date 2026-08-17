@@ -16,12 +16,12 @@ export function VisaGlanceList({ entries, className }: VisaGlanceListProps) {
   return (
     <dl
       className={cn(
-        "grid gap-px border border-border bg-border sm:grid-cols-2",
+        "grid gap-4 sm:grid-cols-2",
         className
       )}
     >
       {entries.map((entry) => (
-        <div key={entry.label} className="bg-surface px-4 py-3">
+        <div key={entry.label} className="paper-card px-5 py-4">
           <dt className="text-xs font-medium tracking-[0.14em] text-muted uppercase">
             {entry.label}
           </dt>

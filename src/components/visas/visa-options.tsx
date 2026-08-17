@@ -20,11 +20,11 @@ export function VisaOptions({ options }: VisaOptionsProps) {
       </h2>
 
       {hasOptions ? (
-        <ul className="mt-6 grid gap-px border border-border bg-border sm:grid-cols-2">
+        <ul className="mt-6 grid gap-4 sm:grid-cols-2">
           {options!.map((option) => {
             const glance = getGlanceEntries(option.glance)
             return (
-              <li key={option.id} className="bg-surface px-5 py-5">
+              <li key={option.id} className="paper-card px-5 py-5">
                 <h3 className="text-base font-semibold tracking-tight">
                   {option.name}
                 </h3>

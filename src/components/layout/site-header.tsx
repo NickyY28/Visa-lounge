@@ -13,11 +13,11 @@ export function SiteHeader() {
   const pathname = usePathname()
 
   return (
-    <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur-sm">
-      <Container className="flex h-16 items-center justify-between gap-6">
+    <header className="sticky top-0 z-40 border-b border-border bg-paper/85 backdrop-blur-md">
+      <Container className="grid h-16 grid-cols-[1fr_auto] items-center gap-4 md:grid-cols-[1fr_auto_1fr]">
         <Link
           href="/"
-          className="shrink-0 font-serif text-lg tracking-tight text-foreground md:text-xl"
+          className="justify-self-start font-serif text-lg tracking-tight text-foreground md:text-xl"
         >
           {site.name}
         </Link>
@@ -45,10 +45,11 @@ export function SiteHeader() {
           })}
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center justify-self-end gap-2">
           <Link
             href={primaryCta.href}
             className={buttonClassName({
+              variant: "secondary",
               size: "sm",
               className: "hidden md:inline-flex",
             })}

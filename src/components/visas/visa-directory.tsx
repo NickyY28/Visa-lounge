@@ -3,8 +3,10 @@
 import Link from "next/link"
 import { useMemo, useState } from "react"
 
+import { MediaFrame } from "@/components/ui/media-frame"
 import type { VisaCountry } from "@/lib/visas"
 import { isoCodeToFlag } from "@/lib/visas"
+import { getDestinationImage } from "@/lib/media"
 import { cn } from "@/lib/utils"
 
 type VisaDirectoryProps = {
@@ -37,7 +39,7 @@ export function VisaDirectory({ countries }: VisaDirectoryProps) {
         placeholder="Search by country name"
         autoComplete="off"
         className={cn(
-          "mt-2 w-full max-w-md border border-border bg-surface px-4 py-3 text-base",
+          "mt-2 w-full max-w-md rounded-full border border-ink/12 bg-surface px-5 py-3 text-base",
           "placeholder:text-muted/80",
           "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring"
         )}
@@ -48,22 +50,45 @@ export function VisaDirectory({ countries }: VisaDirectoryProps) {
           No destinations match your search.
         </p>
       ) : (
-        <ul className="mt-10 grid gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
-          {filtered.map((country) => (
-            <li key={country.slug}>
-              <Link
-                href={`/visas/${country.slug}`}
-                className="group flex items-center gap-3 bg-surface px-4 py-4 transition-colors duration-150 hover:bg-background focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-ring"
-              >
-                <span className="text-xl leading-none" aria-hidden>
-                  {isoCodeToFlag(country.isoCode)}
-                </span>
-                <span className="font-medium tracking-tight text-foreground group-hover:underline group-hover:underline-offset-4">
-                  {country.name}
-                </span>
-              </Link>
-            </li>
-          ))}
+        <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {filtered.map((country) => {
+            const image = getDestinationImage(country.slug)
+            const flag = isoCodeToFlag(country.isoCode)
+
+            return (
+              <li key={country.slug}>
+                <Link
+                  href={`/visas/${country.slug}`}
+                  className="group paper-card block overflow-hidden transition-transform duration-300 hover:-translate-y-1 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
+                >
+                  {image ? (
+                    <MediaFrame
+                      src={image.src}
+                      alt={image.alt}
+                      className="media-flush aspect-[16/10]"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                  ) : (
+                    <div className="flex aspect-[16/10] items-end bg-paper-deep px-4 py-3">
+                      <span className="text-3xl" aria-hidden>
+                        {flag}
+                      </span>
+                    </div>
+                  )}
+                  <span className="flex items-center gap-3 px-4 py-4">
+                    {image && flag ? (
+                      <span className="text-xl leading-none" aria-hidden>
+                        {flag}
+                      </span>
+                    ) : null}
+                    <span className="font-medium tracking-tight text-foreground group-hover:underline group-hover:underline-offset-4">
+                      {country.name}
+                    </span>
+                  </span>
+                </Link>
+              </li>
+            )
+          })}
         </ul>
       )}
     </div>
