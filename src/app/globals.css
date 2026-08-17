@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 /*
-  Visa Lounge — specialist visa service.
-  Paper, ink, and restraint. Not a travel-agency palette.
+  Visa Lounge — classy black & white, with colour only in photography.
 */
 
 :root {
-  --background: #f6f4ef;
-  --foreground: #161616;
-  --muted: #5c5a56;
-  --border: #d6d1c8;
-  --surface: #fffcf7;
-  --ring: #3d4f66;
+  --background: #070707;
+  --foreground: #f4f4f4;
+  --muted: #9a9a9a;
+  --border: #242424;
+  --surface: #101010;
+  --ring: #ffffff;
+  --shade: rgba(0, 0, 0, 0.72);
 }
 
 @theme inline {
@@ -25,6 +25,12 @@
   --font-serif: var(--font-source-serif), ui-serif, Georgia, serif;
 }
 
+@property --border-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
 html {
   overflow-x: clip;
 }
@@ -34,6 +40,19 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
   min-height: 100svh;
+}
+
+body::before {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  background: radial-gradient(
+    ellipse 80% 50% at 50% -10%,
+    rgba(255, 255, 255, 0.045),
+    transparent 55%
+  );
 }
 
 :focus-visible {
@@ -80,5 +99,127 @@ dialog[open] {
 @media (min-width: 1024px) {
   .container-page {
     padding-inline: 2rem;
+  }
+}
+
+/* Colour photography, held in a black frame/shadow */
+.media-frame {
+  position: relative;
+  overflow: hidden;
+  background: #000;
+  box-shadow:
+    0 28px 64px -24px #000,
+    0 8px 24px -12px #000,
+    0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+.media-frame img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.media-frame:hover img {
+  transform: scale(1.05);
+}
+
+.media-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.82) 0%,
+    rgba(0, 0, 0, 0.2) 45%,
+    rgba(0, 0, 0, 0.35) 100%
+  );
+  pointer-events: none;
+}
+
+/* Animated CTA border — slow sweep, like a tech product site */
+.btn-aura {
+  position: relative;
+  isolation: isolate;
+  color: #fff;
+  background: #070707;
+}
+
+.btn-aura::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: -2;
+  border-radius: inherit;
+  background: conic-gradient(
+    from var(--border-angle),
+    transparent 0%,
+    transparent 38%,
+    #fff 50%,
+    transparent 62%,
+    transparent 100%
+  );
+  animation: border-spin 3.2s linear infinite;
+}
+
+.btn-aura::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  z-index: -1;
+  border-radius: inherit;
+  background: #070707;
+}
+
+.btn-aura:hover::after {
+  background: #111;
+}
+
+@keyframes border-spin {
+  to {
+    --border-angle: 360deg;
+  }
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.reveal {
+  animation: rise 0.75s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.reveal-delay-1 {
+  animation-delay: 0.08s;
+}
+
+.reveal-delay-2 {
+  animation-delay: 0.16s;
+}
+
+.reveal-delay-3 {
+  animation-delay: 0.24s;
+}
+
+.reveal-delay-4 {
+  animation-delay: 0.32s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .btn-aura::before,
+  .media-frame img {
+    animation: none;
+    transition: none;
+  }
+
+  .media-frame:hover img {
+    transform: none;
   }
 }
