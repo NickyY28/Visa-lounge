@@ -11,6 +11,7 @@ export function Section({ className, ...props }: SectionProps) {
 }
 
 type SectionHeadingProps = {
+  id?: string
   eyebrow?: string
   title: string
   description?: string
@@ -19,6 +20,7 @@ type SectionHeadingProps = {
 }
 
 export function SectionHeading({
+  id,
   eyebrow,
   title,
   description,
@@ -38,7 +40,10 @@ export function SectionHeading({
           {eyebrow}
         </p>
       ) : null}
-      <h2 className="font-serif text-3xl leading-tight tracking-tight text-foreground md:text-4xl">
+      <h2
+        id={id}
+        className="font-serif text-3xl leading-tight tracking-tight text-foreground md:text-4xl"
+      >
         {title}
       </h2>
       {description ? (

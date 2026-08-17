@@ -1,14 +1,21 @@
-import { Container } from "@/components/ui/container"
+import { CorporateVisaSection } from "@/components/home/corporate-visa-section"
+import { DestinationsSection } from "@/components/home/destinations-section"
+import { FaqSection } from "@/components/home/faq-section"
+import { HeroSection } from "@/components/home/hero-section"
+import { HowItWorksSection } from "@/components/home/how-it-works-section"
+import { MtcSection } from "@/components/home/mtc-section"
+import { TravelInsuranceSection } from "@/components/home/travel-insurance-section"
 
 export default function HomePage() {
   return (
-    <Container className="py-16 md:py-24">
-      <h1 className="font-serif text-3xl tracking-tight md:text-4xl">
-        Visa Lounge
-      </h1>
-      <p className="mt-3 max-w-md text-muted">
-        Site chrome is in place. Homepage sections will follow.
-      </p>
-    </Container>
+    <>
+      <HeroSection />
+      <DestinationsSection />
+      <HowItWorksSection />
+      <CorporateVisaSection />
+      <TravelInsuranceSection />
+      <MtcSection />
+      <FaqSection />
+    </>
   )
 }
