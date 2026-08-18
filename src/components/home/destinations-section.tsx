@@ -1,8 +1,8 @@
 import Link from "next/link"
+import Image from "next/image"
 
 import { buttonClassName } from "@/components/ui/button"
 import { Container } from "@/components/ui/container"
-import { MediaFrame } from "@/components/ui/media-frame"
 import { Reveal } from "@/components/ui/reveal"
 import { Section } from "@/components/ui/section"
 import {
@@ -10,12 +10,10 @@ import {
   placeholderDestinations,
 } from "@/lib/home-content"
 import { getDestinationImage } from "@/lib/media"
+import { isoCodeToFlag } from "@/lib/visas"
 import { cn } from "@/lib/utils"
 
 export function DestinationsSection() {
-  const featured = placeholderDestinations[0]
-  const rest = placeholderDestinations.slice(1)
-
   return (
     <Section aria-labelledby="destinations-heading" className="bg-paper">
       <Container>
@@ -43,50 +41,22 @@ export function DestinationsSection() {
         </Reveal>
 
         <ul className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-5">
-          {featured ? (
-            <li className="col-span-2 md:row-span-2">
-              <DestinationCard
-                name={featured.name}
-                slug={featured.slug}
-                featured
-              />
-            </li>
-          ) : null}
-          {rest.map((destination, index) => (
+          {placeholderDestinations.map((destination, index) => (
             <li key={destination.slug}>
               <DestinationCard
                 name={destination.name}
                 slug={destination.slug}
+                code={destination.code}
                 delay={index * 40}
               />
             </li>
           ))}
-          <li>
-            <Link
-              href="/visas"
-              className="group flex aspect-[3/4] h-full flex-col justify-between rounded-[1.25rem] bg-ink p-5 text-paper shadow-[0_28px_64px_-28px_#000] transition-transform duration-300 hover:-translate-y-1"
-            >
-              <span className="text-[0.7rem] font-medium tracking-[0.16em] text-paper/50 uppercase">
-                Directory
-              </span>
-              <span>
-                <span className="block font-serif text-3xl leading-tight">
-                  {destinationsSection.viewAll}
-                </span>
-                <span
-                  className="mt-3 inline-flex size-10 items-center justify-center rounded-full border border-paper/25 text-lg transition-colors duration-200 group-hover:bg-paper group-hover:text-ink"
-                  aria-hidden
-                >
-                  →
-                </span>
-              </span>
-            </Link>
-          </li>
         </ul>
 
         <p className="mt-6 max-w-2xl text-xs leading-relaxed text-muted">
-          Destinations shown are representative placeholders for layout only.
-          A full supported-country list will be published separately.
+          {destinationsSection.cardNote} Destinations shown are representative
+          placeholders for layout only. A full supported-country list will be
+          published separately.
         </p>
       </Container>
     </Section>
@@ -96,43 +66,63 @@ export function DestinationsSection() {
 function DestinationCard({
   name,
   slug,
-  featured = false,
+  code,
   delay = 0,
 }: {
   name: string
   slug: string
-  featured?: boolean
+  code: string
   delay?: number
 }) {
   const image = getDestinationImage(slug)
+  const flag = isoCodeToFlag(code)
 
   return (
     <Reveal delayMs={delay} className="h-full">
       <Link
         href={`/visas/${slug}`}
-        className={cn(
-          "group block h-full focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
-        )}
+        className="group block h-full focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring"
       >
-        {image ? (
-          <MediaFrame
-            src={image.src}
-            alt={image.alt}
-            caption={name}
-            className={featured ? "h-full min-h-[22rem]" : "aspect-[3/4]"}
-            sizes={
-              featured
-                ? "(max-width: 768px) 100vw, 50vw"
-                : "(max-width: 640px) 50vw, 25vw"
-            }
-          />
-        ) : (
-          <div className="media-frame relative flex aspect-[3/4] h-full flex-col justify-end p-4">
-            <span className="relative z-10 font-serif text-xl text-white">
-              {name}
+        <article
+          className={cn(
+            "media-frame relative flex aspect-[3/4] flex-col justify-end overflow-hidden"
+          )}
+        >
+          {image ? (
+            <Image
+              src={image.src}
+              alt={image.alt}
+              fill
+              sizes="(max-width: 640px) 50vw, 25vw"
+              className="object-cover"
+            />
+          ) : null}
+          <span className="media-shade" aria-hidden />
+
+          <div className="relative z-10 p-3 sm:p-4">
+            <span
+              className="mb-2 inline-flex size-8 items-center justify-center rounded-full bg-white/15 text-base ring-1 ring-white/30 backdrop-blur-sm sm:size-9 sm:text-lg"
+              aria-hidden
+            >
+              {flag}
             </span>
+            <h3 className="font-serif text-xl leading-tight tracking-tight text-white uppercase sm:text-2xl">
+              {name}
+            </h3>
+            <dl className="mt-3 grid grid-cols-3 gap-2 border-t border-white/20 pt-3">
+              {destinationsSection.cardMeta.map((item) => (
+                <div key={item.label}>
+                  <dt className="text-[0.6rem] font-medium tracking-[0.12em] text-white/60 uppercase">
+                    {item.label}
+                  </dt>
+                  <dd className="mt-1 text-[0.7rem] leading-snug font-medium text-white sm:text-xs">
+                    {item.value}
+                  </dd>
+                </div>
+              ))}
+            </dl>
           </div>
-        )}
+        </article>
       </Link>
     </Reveal>
   )

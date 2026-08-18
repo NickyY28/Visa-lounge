@@ -173,11 +173,134 @@ dialog[open] {
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(0, 0, 0, 0.72) 0%,
-    rgba(0, 0, 0, 0.12) 48%,
+    rgba(0, 0, 0, 0.78) 0%,
+    rgba(0, 0, 0, 0.18) 46%,
     rgba(0, 0, 0, 0.28) 100%
   );
   pointer-events: none;
+}
+
+.brand-line {
+  height: 3px;
+  background: linear-gradient(90deg, #7b61ff 0%, #d3548d 52%, #e68a4d 100%);
+}
+
+.nav-pill {
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+  transition:
+    color 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.nav-pill:hover {
+  color: var(--ink);
+  background: rgb(20 18 16 / 0.05);
+}
+
+.nav-pill[aria-current="page"] {
+  color: var(--paper);
+  background: var(--ink);
+}
+
+.visa-toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  box-shadow:
+    0 1px 0 rgb(20 18 16 / 0.04),
+    0 16px 40px -28px rgb(20 18 16 / 0.22);
+}
+
+@media (min-width: 1024px) {
+  .visa-toolbar {
+    flex-direction: row;
+    align-items: stretch;
+  }
+}
+
+.visa-toolbar-search {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.85rem 1.1rem;
+}
+
+@media (min-width: 1024px) {
+  .visa-toolbar-search {
+    min-width: 12rem;
+    flex: 1.1;
+    border-right: 1px solid var(--border);
+  }
+}
+
+.visa-toolbar-field {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.15rem;
+  padding: 0.65rem 1rem;
+  border-top: 1px solid var(--border);
+}
+
+@media (min-width: 1024px) {
+  .visa-toolbar-field {
+    min-width: 0;
+    flex: 1;
+    border-top: none;
+    border-right: 1px solid var(--border);
+  }
+
+  .visa-toolbar-field:last-child {
+    border-right: none;
+  }
+}
+
+.visa-toolbar-label {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.visa-toolbar-select {
+  width: 100%;
+  appearance: none;
+  border: 0;
+  background: transparent;
+  padding-right: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.visa-toolbar-select:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+  border-radius: 0.25rem;
+}
+
+.visa-toolbar-date {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.visa-toolbar-date:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+  border-radius: 0.25rem;
 }
 
 .btn-aura {

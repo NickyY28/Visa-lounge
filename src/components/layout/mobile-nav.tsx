@@ -3,8 +3,9 @@
 import { useCallback, useEffect, useId, useRef } from "react"
 import Link from "next/link"
 
+import { SiteLogo } from "@/components/layout/site-logo"
 import { buttonClassName } from "@/components/ui/button"
-import { primaryCta, primaryNav, site } from "@/lib/site"
+import { primaryCta, primaryNav } from "@/lib/site"
 
 type MobileNavProps = {
   pathname: string
@@ -53,9 +54,12 @@ export function MobileNav({ pathname }: MobileNavProps) {
         }}
       >
         <div className="flex items-center justify-between border-b border-border px-5 py-3">
-          <p id={titleId} className="text-sm font-semibold tracking-tight">
-            {site.name}
-          </p>
+          <SiteLogo
+            id={titleId}
+            className="min-w-0"
+            imageClassName="h-9 w-auto"
+            onClick={close}
+          />
           <button
             type="button"
             className="-mr-2 inline-flex size-10 items-center justify-center rounded-md hover:bg-foreground/5"

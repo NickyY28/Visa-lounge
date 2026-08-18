@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 
+import { buttonClassName } from "@/components/ui/button"
 import { Container } from "@/components/ui/container"
 import { Reveal } from "@/components/ui/reveal"
 import { mtcSection } from "@/lib/home-content"
@@ -11,7 +12,7 @@ export function MtcSection() {
   return (
     <section
       aria-labelledby="mtc-heading"
-      className="relative isolate min-h-[30rem] overflow-hidden md:min-h-[36rem]"
+      className="relative isolate overflow-hidden"
     >
       <Image
         src={pageImages.mtc.src}
@@ -21,38 +22,63 @@ export function MtcSection() {
         className="object-cover"
       />
       <div
-        className="absolute inset-0 bg-gradient-to-r from-ink via-ink/75 to-ink/30"
+        className="absolute inset-0 bg-ink/80"
         aria-hidden
       />
-      <Container className="relative z-10 flex min-h-[30rem] flex-col justify-end py-16 md:min-h-[36rem] md:py-20">
+
+      <Container className="relative z-10 py-20 md:py-28">
         <Reveal>
-          <p className="text-xs font-medium tracking-[0.18em] text-paper/60 uppercase">
+          <p className="text-xs font-medium tracking-[0.18em] text-paper/55 uppercase">
             Related travel
           </p>
           <h2
             id="mtc-heading"
-            className="mt-3 max-w-2xl font-serif text-4xl leading-[1.08] tracking-tight text-paper md:text-6xl"
+            className="sr-only"
           >
-            Visa Lounge{" "}
-            <em className="font-normal italic">×</em> My Travel Company
+            {mtcSection.title}
           </h2>
-          <p className="mt-4 max-w-lg text-base leading-relaxed text-paper/75 md:text-lg">
-            {mtcSection.description}
-          </p>
-          <Link
-            href={site.mtc.href}
-            className="mt-8 inline-flex w-fit items-center gap-3 text-sm font-medium text-paper"
-            rel="noreferrer"
-            target="_blank"
-          >
-            {mtcSection.cta}
-            <span
-              className="inline-flex size-9 items-center justify-center rounded-full border border-paper/30"
+
+          <div className="mt-8 grid items-center gap-8 md:grid-cols-[1fr_auto_1fr] md:gap-10">
+            <div className="border-t border-paper/20 pt-6 md:border-t-0 md:border-r md:pt-0 md:pr-10 md:text-right">
+              <p className="font-serif text-4xl tracking-tight text-paper md:text-5xl">
+                {mtcSection.visaSide.label}
+              </p>
+              <p className="mt-3 text-sm leading-relaxed text-paper/70 md:text-base">
+                {mtcSection.visaSide.line}
+              </p>
+            </div>
+
+            <p
+              className="font-serif text-5xl text-paper/80 italic md:text-7xl"
               aria-hidden
             >
-              →
-            </span>
-          </Link>
+              ×
+            </p>
+
+            <div className="border-t border-paper/20 pt-6 md:border-t-0 md:border-l md:pt-0 md:pl-10">
+              <p className="font-serif text-4xl tracking-tight text-paper md:text-5xl">
+                {mtcSection.travelSide.label}
+              </p>
+              <p className="mt-3 text-sm leading-relaxed text-paper/70 md:text-base">
+                {mtcSection.travelSide.line}
+              </p>
+            </div>
+          </div>
+
+          <p className="mx-auto mt-10 max-w-2xl text-center text-sm leading-relaxed text-paper/65 md:text-base">
+            {mtcSection.description}
+          </p>
+
+          <div className="mt-8 flex justify-center">
+            <Link
+              href={site.mtc.href}
+              className={buttonClassName({ variant: "secondary" })}
+              rel="noreferrer"
+              target="_blank"
+            >
+              {mtcSection.cta}
+            </Link>
+          </div>
         </Reveal>
       </Container>
     </section>

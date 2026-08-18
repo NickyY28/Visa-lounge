@@ -36,10 +36,16 @@ export const placeholderDestinations = [
 ] as const
 
 export const destinationsSection = {
-  title: "Where are you planning to go?",
+  title: "Visa destinations",
   description:
-    "Browse visa destinations we assist with. Each page will explain requirements, the process, and how we can help — once destination guides are published.",
+    "Browse destinations we assist with. Type, validity, and fees are confirmed for your case — they are not listed here as a fixed product.",
   viewAll: "View all visa destinations",
+  cardMeta: [
+    { label: "Service", value: "Visa assistance" },
+    { label: "Process", value: "Application to return" },
+    { label: "Fees", value: "Quoted for you" },
+  ],
+  cardNote: "Type, validity, and fees confirmed when you enquire.",
 } as const
 
 export const howItWorksSection = {
@@ -80,6 +86,12 @@ export const corporateVisaSection = {
   description:
     "Visa Lounge can support business travellers and organisations with visa requirements. Whether you are sending one employee abroad or coordinating several applications, we can discuss what you need.",
   cta: "Explore Corporate Visa",
+  overlay: "One traveller or several. The same process.",
+  points: [
+    { label: "For", value: "Business travellers and organisations" },
+    { label: "Process", value: "The same handling as an individual application" },
+    { label: "Biometrics", value: "The traveller attends when required" },
+  ],
 } as const
 
 export const travelInsuranceSection = {
@@ -94,6 +106,14 @@ export const mtcSection = {
   description:
     "Visa Lounge is the visa-specialist offering connected with My Travel Company, bringing visa assistance alongside the wider travel services available through MTC.",
   cta: "Travel with MTC",
+  visaSide: {
+    label: "Visa Lounge",
+    line: "Visa assistance, from application to return.",
+  },
+  travelSide: {
+    label: "My Travel Company",
+    line: "Wider travel services, through MTC.",
+  },
 } as const
 
 export const faqItems = [
