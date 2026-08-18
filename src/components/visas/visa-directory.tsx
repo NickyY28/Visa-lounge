@@ -1,6 +1,7 @@
 "use client"
 
-import { useMemo, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
+import { useSearchParams } from "next/navigation"
 
 import { VisaDestinationCard } from "@/components/visas/visa-destination-card"
 import { VisaDirectoryToolbar } from "@/components/visas/visa-directory-toolbar"
@@ -15,6 +16,8 @@ type VisaDirectoryProps = {
 }
 
 export function VisaDirectory({ countries }: VisaDirectoryProps) {
+  const searchParams = useSearchParams()
+  const searchFromUrl = searchParams.get("search") ?? ""
   const [query, setQuery] = useState("")
   const [delivery, setDelivery] = useState<string>(
     visaDirectoryFilters.delivery.defaultValue
@@ -28,6 +31,10 @@ export function VisaDirectory({ countries }: VisaDirectoryProps) {
   const [travelDate, setTravelDate] = useState<string>(
     visaDirectoryFilters.travel.defaultValue
   )
+
+  useEffect(() => {
+    setQuery(searchFromUrl)
+  }, [searchFromUrl])
 
   const filtersActive =
     delivery !== visaDirectoryFilters.delivery.defaultValue ||

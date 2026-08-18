@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import type { ReactNode } from "react"
 import { Source_Sans_3, Source_Serif_4 } from "next/font/google"
 
+import { FloatingWhatsApp } from "@/components/layout/floating-whatsapp"
 import { SiteFooter } from "@/components/layout/site-footer"
 import { SiteHeader } from "@/components/layout/site-header"
 import { site } from "@/lib/site"
@@ -48,6 +49,7 @@ export default function RootLayout({
         <main id="main-content" className="flex-1">
           {children}
         </main>
+        <FloatingWhatsApp />
         <SiteFooter />
       </body>
     </html>
