@@ -144,6 +144,7 @@ dialog[open] {
 
 .media-frame {
   position: relative;
+  z-index: 81;
   overflow: hidden;
   background: #111;
   border-radius: 1.25rem;

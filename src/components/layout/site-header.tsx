@@ -13,7 +13,7 @@ export function SiteHeader() {
   const pathname = usePathname()
 
   return (
-    <header className="sticky top-0 z-40 border-b border-border bg-paper/90 backdrop-blur-md">
+    <header className="sticky top-0 z-[90] border-b border-border bg-paper/90 backdrop-blur-md">
       <Container className="grid h-[4.75rem] grid-cols-[1fr_auto] items-center gap-4 md:grid-cols-[auto_1fr_auto] md:gap-6">
         <SiteLogo
           priority

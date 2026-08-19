@@ -118,7 +118,7 @@ export const destinationImages: Record<string, { src: string; alt: string }> = {
     alt: "The Colosseum, Rome",
   },
   japan: {
-    src: unsplash("photo-1540959733332-eab4deabeeaf"),
+    src: "https://images.unsplash.com/photo-1522547902298-51566e4fb383?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Tokyo at night",
   },
   jordan: {
@@ -138,79 +138,79 @@ export const destinationImages: Record<string, { src: string; alt: string }> = {
     alt: "Vilnius old town",
   },
   luxembourg: {
-    src: unsplash("photo-1551884170-09fb70a3a144"),
+    src: "https://images.unsplash.com/photo-1662239936406-522b4f82546a?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Luxembourg city",
   },
   malta: {
-    src: unsplash("photo-1555992336-03a23c7b087d"),
+    src: "https://images.unsplash.com/photo-1612172976094-97dc088354a7?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Malta harbour",
   },
   morocco: {
-    src: unsplash("photo-1489749798305-4fea3ae63d43"),
+    src: "https://images.unsplash.com/photo-1653323792487-6ecc6217040b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Moroccan medina",
   },
   netherlands: {
-    src: unsplash("photo-1534351590666-13e3e96fd619"),
+    src: "https://images.unsplash.com/photo-1574763589458-252c15da0c70?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Amsterdam canals",
   },
   "new-zealand": {
-    src: unsplash("photo-1507699622109-0be35e86b6b2"),
+    src: "https://images.unsplash.com/photo-1747920195581-505301129426?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "New Zealand mountains",
   },
   oman: {
-    src: unsplash("photo-1546412414-e1885259563a"),
+    src: "https://images.unsplash.com/photo-1599743777555-e362a2feab39?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Oman desert",
   },
   portugal: {
-    src: unsplash("photo-1555881400-74d7aca8a582"),
+    src: "https://images.unsplash.com/photo-1571767750274-4795bdfcb642?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Lisbon tram",
   },
   russia: {
-    src: unsplash("photo-1513326738677-a9646b1361ba"),
+    src: "https://images.unsplash.com/photo-1513326738677-b964603b136d?q=80&w=749&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Saint Basil's Cathedral, Moscow",
   },
   singapore: {
-    src: unsplash("photo-1525625293386-3f8f99389edd"),
+    src: "https://images.unsplash.com/photo-1686455746257-0210c23f7064?q=80&w=725&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Marina Bay, Singapore",
   },
   "south-africa": {
-    src: unsplash("photo-1484318571209-81cf3a3680f3"),
+    src: "https://images.unsplash.com/photo-1770988966556-459ef8383aad?q=80&w=697&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Cape Town",
   },
   "south-korea": {
-    src: unsplash("photo-1517154421773-0529f29ea451"),
+    src: "https://images.unsplash.com/photo-1570191913384-7b4ff11716e7?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Seoul cityscape",
   },
   spain: {
-    src: unsplash("photo-1558642452-9d2a7deb7f62"),
+    src: "https://images.unsplash.com/photo-1644144974835-61c2c13c79c5?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Barcelona architecture",
   },
   sweden: {
-    src: unsplash("photo-1509356847031-3e7c2c5fd1c8"),
+    src: "https://images.unsplash.com/photo-1775740291953-45bb5e9b3751?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Stockholm old town",
   },
   switzerland: {
-    src: unsplash("photo-1530122037265-a5f1f91a3ba0"),
+    src: "https://images.unsplash.com/photo-1575032872568-cbda501dea3a?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Swiss Alps",
   },
   taiwan: {
-    src: unsplash("photo-1470004914212-055785e64593"),
+    src: "https://images.unsplash.com/photo-1601534622119-e9b3aa7c7bdf?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Taipei city",
   },
   thailand: {
-    src: unsplash("photo-1552465011-b4e21bf6e79a"),
+    src: "https://images.unsplash.com/photo-1773326648570-09b320430570?q=80&w=683&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Thai temple at dusk",
   },
   turkey: {
-    src: unsplash("photo-1524231757912-21f4fe3a7200"),
+    src: "https://images.unsplash.com/photo-1759347171702-e9cae049bc01?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Istanbul skyline",
   },
   "united-arab-emirates": {
-    src: unsplash("photo-1512453979798-5ea266f8880c"),
+    src: "https://images.unsplash.com/photo-1748373452031-ee1ae4eb624d?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Dubai skyline",
   },
   "united-kingdom": {
-    src: unsplash("photo-1513635269975-59663e0ac1ad"),
+    src: "https://images.unsplash.com/photo-1529655683826-aba9b3e77383?q=80&w=765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "London at twilight",
   },
   usa: {
@@ -223,11 +223,11 @@ export const destinationImages: Record<string, { src: string; alt: string }> = {
     alt: "New York harbour",
   },
   uzbekistan: {
-    src: unsplash("photo-1561214115-f2f134cc4912"),
+    src: "https://images.unsplash.com/photo-1647551640893-1d73a1e09c9f?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Samarkand architecture",
   },
   vietnam: {
-    src: unsplash("photo-1528127269322-539801943592"),
+    src: "https://images.unsplash.com/photo-1663602020492-ee3aea145f2b?q=80&w=765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Ha Long Bay, Vietnam",
   },
 }
