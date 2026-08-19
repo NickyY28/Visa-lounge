@@ -46,75 +46,75 @@ export const collageImages = [
 
 export const destinationImages: Record<string, { src: string; alt: string }> = {
   australia: {
-    src: unsplash("photo-1523482580672-f109ba8cb9be"),
+    src: "https://images.unsplash.com/photo-1595740229246-cfdda61917c6?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Sydney Opera House",
   },
   austria: {
-    src: unsplash("photo-1516556818900-7d8f8a4e4b1e"),
+    src: "https://images.unsplash.com/photo-1754331202504-50f7fd91bad2?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Vienna architecture",
   },
   azerbaijan: {
-    src: unsplash("photo-1565008576549-5756a4522eae"),
+    src: "https://images.unsplash.com/photo-1596306499300-0b7b1689b9f6?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Baku skyline",
   },
   cambodia: {
-    src: unsplash("photo-1552465011-b4e21bf6e79a"),
+    src: "https://images.unsplash.com/photo-1675564813497-75cf769cb74b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Angkor Wat at dusk",
   },
   canada: {
-    src: unsplash("photo-1519832979-6fa0670a8f8e"),
+    src: "https://images.unsplash.com/photo-1567647753830-de3fe7ce9f28?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Canadian mountains and lake",
   },
   china: {
-    src: unsplash("photo-1508804185872-d7badad00f7d"),
+    src: "https://images.unsplash.com/photo-1711730751207-4273bdf245d3?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Great Wall of China",
   },
   croatia: {
-    src: unsplash("photo-1555992336-03a23c7b087d"),
+    src: "https://images.unsplash.com/photo-1655547086697-6a90cf88f6d3?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Dubrovnik old town",
   },
   "czech-republic": {
-    src: unsplash("photo-1541849546-216549ae216d"),
+    src: "https://images.unsplash.com/photo-1580852710598-96912fc48065?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Prague old town",
   },
   denmark: {
-    src: unsplash("photo-1513622470522-26c0568aba34"),
+    src: "https://images.unsplash.com/photo-1659114389529-0f15067332af?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Copenhagen waterfront",
   },
   egypt: {
-    src: unsplash("photo-1539768942893-daf53e448371"),
+    src: "https://images.unsplash.com/photo-1644166498629-93fb54b286ee?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Pyramids of Giza",
   },
   finland: {
-    src: unsplash("photo-1516026672322-bc52d61a55d5"),
+    src: "https://images.unsplash.com/photo-1641237608414-f90192f9b380?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Helsinki harbour",
   },
   france: {
-    src: unsplash("photo-1502602898657-3e91760cbb34"),
+    src: "https://images.unsplash.com/photo-1551865673-9e9ee4f8cd4c?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Paris street with the Eiffel Tower",
   },
   georgia: {
-    src: unsplash("photo-1565008576549-5756a4522eae"),
+    src: "https://images.unsplash.com/photo-1608499781813-44bd498ed089?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Tbilisi cityscape",
   },
   greece: {
-    src: unsplash("photo-1613395877344-13d4a8e0d325"),
+    src: "https://images.unsplash.com/photo-1596933144889-c15043a9ddde?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Santorini, Greece",
   },
   "hong-kong": {
-    src: unsplash("photo-1536599018102-9f803c140fc1"),
+    src: "https://images.unsplash.com/photo-1759766730110-8ff0a6222693?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Hong Kong skyline",
   },
   iceland: {
-    src: unsplash("photo-1504829857797-ddff29c27927"),
+    src: "https://images.unsplash.com/photo-1659987112240-46631781d245?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Iceland landscape",
   },
   indonesia: {
-    src: unsplash("photo-1518548419970-58e3b4079cd2"),
+    src: "https://images.unsplash.com/photo-1532186651327-6ac23687d189?q=80&w=749&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Bali temple",
   },
   italy: {
-    src: unsplash("photo-1515542622106-78bda8ba0e5b"),
+    src: "https://images.unsplash.com/photo-1597078769181-96921b8a2166?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "The Colosseum, Rome",
   },
   japan: {
@@ -122,19 +122,19 @@ export const destinationImages: Record<string, { src: string; alt: string }> = {
     alt: "Tokyo at night",
   },
   jordan: {
-    src: unsplash("photo-1548013146-7240edaa25c3"),
+    src: "https://images.unsplash.com/photo-1554357475-accb8a88a330?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Petra, Jordan",
   },
   kenya: {
-    src: unsplash("photo-1523805009345-74488810a58e"),
+    src: "https://images.unsplash.com/photo-1728042107033-76b13feac547?q=80&w=715&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Kenya savanna",
   },
   laos: {
-    src: unsplash("photo-1528183429752-a97d0ef99369"),
+    src: "https://images.unsplash.com/photo-1720655260134-90960a710cc0?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Luang Prabang temples",
   },
   lithuania: {
-    src: unsplash("photo-1599946347371-68eb71b16ca3"),
+    src: "https://images.unsplash.com/photo-1667743350028-e0a17093d7e4?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "Vilnius old town",
   },
   luxembourg: {
@@ -218,7 +218,8 @@ export const destinationImages: Record<string, { src: string; alt: string }> = {
     alt: "New York harbour",
   },
   "united-states": {
-    src: unsplash("photo-1485738422979-f5c275a343c6"),
+    // src: unsplash("photo-1485738422979-f5c275a343c6"),
+    src: "https://images.unsplash.com/photo-1775144113589-a7a6e3d02175?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     alt: "New York harbour",
   },
   uzbekistan: {

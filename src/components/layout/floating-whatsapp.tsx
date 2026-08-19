@@ -18,7 +18,7 @@ export function FloatingWhatsApp() {
 
 function WhatsAppMark() {
   return (
-    <svg className="size-5" viewBox="0 0 24 24" fill="none" aria-hidden>
+    <svg className="size-7" viewBox="0 0 24 24" fill="none" aria-hidden>
       <path
         d="M12 3.5A8.5 8.5 0 0 0 5.2 16.7L4 20.5l3.9-1.2A8.5 8.5 0 1 0 12 3.5Z"
         stroke="currentColor"
