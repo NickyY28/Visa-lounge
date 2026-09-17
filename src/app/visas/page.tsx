@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { Suspense } from "react"
 
 import { VisaDirectory } from "@/components/visas/visa-directory"
 import { Container } from "@/components/ui/container"
@@ -35,7 +36,9 @@ export default function VisasPage() {
         </div>
 
         <div className="mt-10">
-          <VisaDirectory countries={countries} />
+          <Suspense fallback={null}>
+            <VisaDirectory countries={countries} />
+          </Suspense>
         </div>
 
         <p className="mt-10 max-w-2xl text-xs leading-relaxed text-muted">
